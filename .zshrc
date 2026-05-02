@@ -4,9 +4,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # source global shell alias & variables files
-[ -f "$XDG_CONFIG_HOME/shell/alias" ] && source "$XDG_CONFIG_HOME/shell/alias"
-[ -f "$XDG_CONFIG_HOME/shell/vars" ] && source "$XDG_CONFIG_HOME/shell/vars"
-[ -f "$XDG_CONFIG_HOME/zsh/hibob" ] && source "$XDG_CONFIG_HOME/zsh/hibob"
+[ -f "$XDG_CONFIG_HOME/shell/alias.sh" ] && source "$XDG_CONFIG_HOME/shell/alias.sh"
+[ -f "$XDG_CONFIG_HOME/shell/vars.sh" ] && source "$XDG_CONFIG_HOME/shell/vars.sh"
+[ -f "$XDG_CONFIG_HOME/zsh/hibob.zsh" ] && source "$XDG_CONFIG_HOME/zsh/hibob.zsh"
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)
