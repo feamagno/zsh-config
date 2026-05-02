@@ -10,6 +10,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 # bootstrap .zshrc to ~/.config/zsh/.zshrc, any other zsh config files can also reside here
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
+export PATH="$HOME/.local/bin:$PATH"
 # 1. Add the main scripts directory
 export PATH="$XDG_CONFIG_HOME/scripts:$PATH"
 
