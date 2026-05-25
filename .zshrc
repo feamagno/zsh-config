@@ -4,15 +4,28 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # source global shell alias & variables files
-[ -f "$XDG_CONFIG_HOME/shell/alias.sh" ] && source "$XDG_CONFIG_HOME/shell/alias.sh"
+[ -f "$XDG_CONFIG_HOME/shell/alias.sh" ] && source "$XDG_CONFIG_HOME/shell/alias.sh" 
 [ -f "$XDG_CONFIG_HOME/shell/vars.sh" ] && source "$XDG_CONFIG_HOME/shell/vars.sh"
 [ -f "$XDG_CONFIG_HOME/zsh/hibob.zsh" ] && source "$XDG_CONFIG_HOME/zsh/hibob.zsh"
 
 # Load Angular CLI autocompletion.
-source <(ng completion script)
+#source <(ng completion script)
+
+if [[ "$(locale LC_CTYPE)" == "UTF-8" ]]; then
+    setopt COMBINING_CHARS
+fi
+
+# Save command history
+HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
+HISTSIZE=2000
+SAVEHIST=1000
+
+# Default prompt
+PS1="%n@%m %~ %# "
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
+
 
 bindkey -s ^f "tmux-sessionizer\n"
 bindkey -s '\eh' "tmux-sessionizer -s 0\n"
