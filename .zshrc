@@ -8,6 +8,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -f "$XDG_CONFIG_HOME/shell/vars.sh" ] && source "$XDG_CONFIG_HOME/shell/vars.sh"
 [ -f "$XDG_CONFIG_HOME/zsh/hibob.zsh" ] && source "$XDG_CONFIG_HOME/zsh/hibob.zsh"
 
+PS1="%n@%m %~ %# "
+
 # Load Angular CLI autocompletion.
 source <(ng completion script)
 
